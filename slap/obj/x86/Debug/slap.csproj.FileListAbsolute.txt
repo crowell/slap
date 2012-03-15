@@ -1,0 +1,6 @@
+C:\Users\jeff\Dropbox\slap\slap\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\jeff\Dropbox\slap\slap\bin\Debug\slap.exe.config
+C:\Users\jeff\Dropbox\slap\slap\bin\Debug\slap.exe
+C:\Users\jeff\Dropbox\slap\slap\bin\Debug\slap.pdb
+C:\Users\jeff\Dropbox\slap\slap\obj\x86\Debug\slap.exe
+C:\Users\jeff\Dropbox\slap\slap\obj\x86\Debug\slap.pdb
