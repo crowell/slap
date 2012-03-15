@@ -37,7 +37,7 @@ namespace slap
             {
                 Clipboard.SetText(url);
             }
-            System.Console.WriteLine("uploaded file to " + url + "and copied url to clipboard");
+            System.Console.WriteLine("uploaded file to " + url + " and copied url to clipboard");
         }
                
         [STAThreadAttribute]
@@ -76,7 +76,7 @@ namespace slap
             int time;
             if (args.Length > 3 && Int32.TryParse(args[3], out time))
             {
-                string paste_expire = args[4];
+                string paste_expire = args[3];
                 post.PostItems.Add("paste_expire", paste_expire);
             }
             post.Type = PostSubmitter.PostTypeEnum.Post;
