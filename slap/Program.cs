@@ -29,20 +29,43 @@ namespace slap
         static void copyToClipboard(string url)
         {
             string command = String.Empty;
+            string args = String.Empty;
             if (Environment.OSVersion.Platform == PlatformID.MacOSX)
             {
                 //its a mac.  pbcoby for pasteboard
-                command = "pbcopy";
+                if (File.Exists("/usr/bin/pbcopy"))
+                {
+                    command = "/usr/bin/pbcopy";
+                }
+
             }
             else if (Environment.OSVersion.Platform == PlatformID.Unix)
             {
                 //its linux.  assume that you've got X running.
-                command = "xsel --clipboard --input";
+                if (File.Exists("/usr/bin/pbcopy"))
+                {
+                    command = "/usr/bin/pbcopy";
+                }
+                else if (File.Exists("/usr/bin/xsel"))
+                {
+                    command = "/usr/bin/xsel";
+                    args = "--clipboard --input";
+                }
             }
             if (command != String.Empty)
             {
                 //for linux and mac, execute the copy to clipboard
-                Process.Start("echo " + url + " | " + command);
+                //Process.Start("echo " + url + " | " + command);
+                Process pr = new Process();
+                ProcessStartInfo si = new ProcessStartInfo(command, args);
+                si.RedirectStandardInput = true;
+                si.UseShellExecute = false;
+                pr.StartInfo = si;
+                pr.Start();
+                pr.StandardInput.Write(url);
+                pr.StandardInput.Close();
+                pr.WaitForExit();
+                pr.Close();
             }
             else
             {
