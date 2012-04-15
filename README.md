@@ -60,6 +60,7 @@ be accepted.
 * ANSI code style (feel free to use astyle)
 
 No whitespace between function name and args:
+
     void foo(bar)
     // good
     
@@ -71,6 +72,7 @@ Ternary expressions are usually not fine, please use if/else if/else blocks inst
 
 
 Methods:
+
     foo.bar = function() 
     {
     }
