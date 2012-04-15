@@ -10,7 +10,7 @@ Slap is written in C# and runs in .NET as well as Mono, allowing for use in Wind
 
 For more details check the [website]
 
-  [website]: http://crowell.github.com/slap/main.html
+
   
 # Slap
 
@@ -49,7 +49,8 @@ That's it!
 
 ## More Information
 
-* Follow [endtwist](http://twitter.com/jeffreycrowell) on twitter for updates
+* Follow [jeffreycrowell](http://twitter.com/jeffreycrowell) on twitter for updates
+* Github [website]: http://crowell.github.com/slap/main.html
 
 ## Compatibility
 
